@@ -1,0 +1,33 @@
+<button id="btn" onclick="cv()">Hide</button>
+
+<div id="hide" onmouseover="cngclr()">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio deserunt repudiandae fuga exercitationem sint id vero earum tempora dignissimos ratione ab ad, nihil ducimus maxime sequi dolore, expedita, rem ipsam.
+
+</div>
+
+
+<script>
+    let itr ;
+    function rgb() {
+    let r = () => Math.floor(Math.random() * 899) + 100;
+    hide.style.color = `rgb(${r()} ${r()} ${r()})`
+   }
+    function cngclr() {
+        itr = setInterval(rgb, 1000)
+        
+          
+    }
+   function cv() {
+    if (btn.innerText == "Hide") {
+        hide.style.display = "none"
+        btn.innerText = "Show"
+        clearInterval(itr)
+    } else {
+        btn.innerText = "Hide"
+        hide.style.display = ""
+    }
+
+    
+   }
+
+</script>
+
