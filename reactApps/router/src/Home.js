@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './Home.css';
 
 const Home = () => {
@@ -6,6 +6,10 @@ const Home = () => {
     const [inputData, setInputData] = useState({ name: "", age: "" });
     const [editData, setEdit] = useState({ id: null, name: "", age: "" });
     const [whatToShow, setShow] = useState("");
+    
+    useEffect(() => {
+        setData(prev => prev.map((obj, index) => ({...obj, id:index + 1})))
+    },[whatToShow])
 
     const handleChange = (e) => {
         setInputData(prev => ({ ...prev, [e.target.name]: e.target.value }));
