@@ -16,7 +16,7 @@ const Navbar = () => {
             </div>
             <div className={`nav-links ${toggle? "active": ""}`}>
                 <Link to={"/"}>Home</Link>
-                <Link to={"/about"}>About</Link>
+                <Link to={"/airtel"}>Airtel</Link>
                 <Link to={"/contact"}>Contact</Link>
                 <Link to={"/login"}>Login</Link>
             </div>
