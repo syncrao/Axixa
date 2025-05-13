@@ -1,0 +1,15 @@
+.card {
+  flex: 1 1 max(20%, 250px);
+  box-sizing: border-box;
+}
+
+.card {
+    width: 250px;
+    padding:1rem;
+}
+
+.product-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}

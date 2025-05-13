@@ -4,7 +4,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css'
 import Home from './Home';
 import Airtel from './Airtel';
-import Contact from './Contact';
+import Products from './productDisplay/Index.js';
 import Login from './Login';
 import Navbar from './Navbar';
 
@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/airtel' element={<Airtel/>} />
-        <Route path='/contact' element={<Contact/>} />
+        <Route path='/products' element={<Products/>} />
         <Route path='/login' element={<Login/>} />
       </Routes>
    </BrowserRouter>
