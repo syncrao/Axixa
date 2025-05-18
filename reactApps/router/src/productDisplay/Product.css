@@ -1,15 +1,26 @@
 .card {
-  flex: 1 1 max(20%, 250px);
-  box-sizing: border-box;
-}
-
-.card {
-    width: 250px;
-    padding:0.2rem;
+    max-width: 300px;
+    max-height: 550px;
+    padding:0.6rem;
 }
 
 .product-img {
     width: 100%;
     object-fit: cover;
     margin-bottom: 12px;
+}
+
+.price-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.price-card h6, .price-card p{
+  margin: 0;
+}
+
+.price-card p {
+  font-size: 0.6rem;
 }
