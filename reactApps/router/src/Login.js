@@ -1,30 +1,21 @@
-import { createContext, useContext } from 'react'
-const Legacy = createContext();
-
-const Baap = () => {
-    return (<>
-        <div>Baap</div>
-        <Beta/>
-        </>
-    )
-};
-
-const Beta = () => {
-    const val = useContext(Legacy)
-    return (
-        <div>Beta {val}</div>
-    )
-};
+import { useRef, useState } from 'react'
 
 function Login() {
+    const [data2, setData] = useState(10)
+    const data = useRef(10)
+
+   
+ 
 
     return (
-        <Legacy.Provider value={12}>
+   
         <div >
-            dada
+            {data.current}
+            <button onClick={() => data.current = data.current + data2 }>update</button>
+            <button onClick={() => setData((prev) => prev + 1)} >Update State</button>
+            {data2}
         </div> 
-        <Baap></Baap>
-        </Legacy.Provider>
+   
     )
 }
 

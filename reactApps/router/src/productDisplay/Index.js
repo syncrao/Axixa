@@ -25,7 +25,7 @@ const Products = () => {
                 ))}
             </div>
             <div className='products'>
-                {data.filter(obj => category === "All" || obj.Category === category).map(obj => <Product data={obj} />)}
+                {data.filter(obj => category === "All" || obj.Category === category).map(obj => <Product data={obj} item={setItem} />)}
             </div>
         </div>
     )

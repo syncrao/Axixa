@@ -13,7 +13,8 @@ const Product = (props) => {
                 <p>M.R.P. <span><del> - ₹{props.data.price + (props.data.price * 0.10)}</del></span></p>
                 <h6><big className='text-danger'>-10%  </big> <sup>₹</sup>{props.data.price}</h6>
             </div>
-            <button>Add to card</button>
+            <button >Add to card</button>
+       
         </div>
     </div>
 }
