@@ -16,9 +16,10 @@
 
 // arr(data)
 
-const name = "axixa"
+const currunt = {value:"Axixa"}
 const age = 10
 
-const data = {name, age}
+
+const data = {name:currunt.value, age}
 
 console.log(data)

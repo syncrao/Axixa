@@ -1,15 +1,15 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 const data = { name: "axixa", age: "10" }
 
 
 const Create = () => {
-    const [name, setName] = useState(" djd")
-    const [age, setAge] = useState("10")
-    console.log("name:" ,name, "Age:", age)
+    const name = useRef()
+    const age = useRef()
+  
 
     const createPost = () => {
-        axios.post('https://raoapi.vercel.app/api/school/artist/', { name, age })
+        axios.post('https://raoapi.vercel.app/api/school/artist/', { name:name.current.value, age:age.current.value })
             .then(response => {
                 console.log(response.data);
             })
@@ -17,12 +17,18 @@ const Create = () => {
                 console.error(error);
             });
     }
+
+    const checkRef = () => {
+        console.log("useRef check ", name.current.value)
+    }
+
     return (<>
-        {name}
-        <input placeholder="name" type="text" name="name" onChange={(elemant) => setName(elemant.target.value)} />
-        {age}
-        <input placeholder="age" type="number" name="age" onChange={(elemant) => setAge(elemant.target.value)} />
+        <input placeholder="name" type="text" name="name"  ref={name} />
+        <input placeholder="age" type="number" name="age" ref={age} />
         <button onClick={createPost} >Create</button>
+        <button onClick={checkRef} >Check</button>
+        
+
     </>
     )
 }
