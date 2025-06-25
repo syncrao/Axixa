@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.form-input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+textarea.form-input {
+  height: 80px;
+  resize: vertical;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
